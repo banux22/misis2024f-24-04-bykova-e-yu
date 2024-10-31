@@ -1,15 +1,16 @@
 #include <iostream>
-#include <vector>
-int main(){
+int main() {
     int n;
     std::cin >> n;
-    std::vector <int> ans;
-    for(int i=0; i < n; i++){
-        int a;
-        std::cin >> a;
-        ans[a] = i; 
+    int a[n];
+    for (int i = 0; i < n; ++i) {
+        std::cin >> a[i];
     }
-	for(int i = ans.size() - 1; i >= 0; i--){
+    int ans[n];
+    for (int i = 0; i < n; ++i) {
+        ans[a[i] - 1] = i + 1;
+    }
+    for (int i = 0; i < n; ++i) {
         std::cout << ans[i] << ' ';
-    } 
+    }
 }
