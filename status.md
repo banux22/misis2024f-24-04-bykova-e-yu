@@ -1,4 +1,4 @@
-STAMP: 20241030-075632
-ERROR: file prj.lab/CMakeLists.txt is absent
-ERROR: CMake generator failed
+STAMP: 20241103-092755
+OK: file codeforces.id is correct
+OK: CMake generator successed
 OK: folder prj.codeforces structure is correct
