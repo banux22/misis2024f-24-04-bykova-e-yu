@@ -1,7 +1,5 @@
-STAMP: 20241114-093436
+STAMP: 20241115-102755
 OK: file codeforces.id is correct
-ERROR: file prj.lab/rational/CMakeLists.txt is absent
-ERROR: file prj.lab/rational/rational.hpp is absent
 OK: CMake generator successed
 OK: folder prj.codeforces structure is correct
 ERROR: lab complex - test build failed
