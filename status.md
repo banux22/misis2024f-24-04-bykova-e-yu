@@ -1,5 +1,7 @@
-STAMP: 20241115-102755
+STAMP: 20241118-223538
 OK: file codeforces.id is correct
+ERROR: file prj.test/arrayd_doctest.cpp is absent
+ERROR: file prj.test/rational_doctest.cpp is absent
 OK: CMake generator successed
 OK: folder prj.codeforces structure is correct
 ERROR: lab complex - test build failed
