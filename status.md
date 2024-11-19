@@ -1,5 +1,8 @@
-STAMP: 20241118-232857
+STAMP: 20241119-225920
 OK: file codeforces.id is correct
+ERROR: file prj.lab/arrayd/CMakeLists.txt is absent
+ERROR: file prj.lab/arrayd/arrayd.hpp is absent
+ERROR: file prj.lab/arrayd/arrayd.cpp is absent
 ERROR: file prj.test/arrayd_doctest.cpp is absent
 ERROR: file prj.test/rational_doctest.cpp is absent
 OK: CMake generator successed
