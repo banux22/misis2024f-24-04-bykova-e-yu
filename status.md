@@ -1,8 +1,5 @@
-STAMP: 20241213-005920
+STAMP: 20241215-221727
 OK: file codeforces.id is correct
-ERROR: file prj.test/arrayd_doctest.cpp is absent
-ERROR: file prj.test/arrayt_doctest.cpp is absent
-ERROR: file prj.test/stackl_doctest.cpp is absent
 ERROR: file prj.test/queue_doctest.cpp is absent
 OK: CMake generator successed
 OK: folder prj.codeforces structure is correct
