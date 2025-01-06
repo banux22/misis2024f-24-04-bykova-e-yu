@@ -16,14 +16,8 @@ target_link_libraries(arrayd_test arrayd)
 add_executable(arrayd_doctest arrayd_doctest.cpp)
 target_link_libraries(arrayd_doctest arrayd)
 
-add_executable(arrayt_test arrayt_test.cpp)
-target_link_libraries(arrayd_test arrayt)
-
 add_executable(arrayt_doctest arrayt_doctest.cpp)
 target_link_libraries(arrayd_doctest arrayt)
-
-add_executable(stackl_test stackl_test.cpp)
-target_link_libraries(stackl_test stackl)
 
 add_executable(stackl_doctest stackl_doctest.cpp)
 target_link_libraries(stackl_doctest stackl)
