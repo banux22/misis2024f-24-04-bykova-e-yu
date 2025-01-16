@@ -1,39 +1,111 @@
-#include "complex/complex.hpp"
-#include <iostream>
-#include <stdexcept>
-#include <sstream>
+#include <complex/complex.hpp>
 
-bool TestParse(const std::string& str) {
-  std::istringstream istrm(str);
-  Complex z;
-  istrm >> z;
-  if (istrm.good()) {
-    std::cout << "Read succeeded: " << str << "->" << z << '\n';
-  } else {
-    std::cout << "Read error: " << str << "->" << z << '\n';
-  }
-  return istrm.good();
+void test() {
+
+	Complex a(2, 3);
+	std::cout << "Given complex num A: " << a << '\n';
+
+	Complex b(4, 5);
+	std::cout << "Given complex num B: " << b << '\n';;
+
+	double c = 6;
+	std::cout << "Given double num C: " << c << '\n';
+
+	Complex a_save = a;
+	Complex b_save = b;
+	double c_save = c;
+
+	std::cout << '\n';
+
+	std::cout << "sum operator+ in complex: " << a + b << '\n';
+	a += b;
+	std::cout << "sum operator+= in complex: " << a << '\n';
+	a = a_save;
+
+	std::cout << "sum operator+ in double: " << a + c << '\n';
+	a += c;
+	std::cout << "sum operator+= in double: " << a << '\n';
+
+	std::cout << '\n';
+
+	a = a_save;
+	std::cout << "dif operator- in complex: " << a - b << '\n';
+	a -= b;
+	std::cout << "dif operator-= in complex: " << a << '\n';
+
+	a = a_save;
+	std::cout << "dif operator- in double: " << a - c << '\n';
+	a -= c;
+	std::cout << "dif operator-= in double: " << a << '\n';
+
+	std::cout << '\n';
+
+	a = a_save;
+	std::cout << "mul operator* in complex: " << a * b << '\n';
+	a *= b;
+	std::cout << "mul operator*= in complex: " << a << '\n';
+
+	a = a_save;
+	std::cout << "mul operator* in double: " << a * c << '\n';
+	a *= c;
+	std::cout << "mul operator*= in double: " << a << '\n';
+
+	std::cout << '\n';
+
+	a = a_save;
+	std::cout << "div operator/ in complex: " << a / b << '\n';
+	a /= b;
+	std::cout << "div operator/= in complex: " << a << '\n';
+
+	a = a_save;
+	std::cout << "div operator/ in double: " << a / c << '\n';
+	a /= c;
+	std::cout << "div operator/= in double: " << a << '\n';
+
+	std::cout << '\n';
+
+	a = a_save;
+	std::cout << "abs with abs(a): " << abs(a) << '\n';
+	std::cout << "abs with a.abs(): " << a.abs() << '\n';
+
+	std::cout << "arg with argument(): " << argument(a) << '\n';
+	std::cout << "arg with a.argument(): " << a.argument() << '\n';
+
+	std::cout << "con with conjugate(a): " << conjugate(a) << '\n';
+	a.conjugate();
+	std::cout << "con with a.conjugate();: " << a << '\n';
+
+	a = a_save;
+	std::cout << "!Complex(): " << !a << '\n';
+
+	a = a_save;
+	std::cout << "pow with pow(a, 2): " << pow(a, 2) << '\n';
+	a.pow(2);
+	std::cout << "pow with a.pow(2): " << a << '\n';
+
+	a = a_save;
+	std::cout << "sqrt with sqrt(): " << sqrt(a, 2) << '\n';
+	a.sqrt(2);
+	std::cout << "sqrt with a.sqrt(): " << a << '\n';
+
+	a = -a_save;
+	std::cout << "-Complex(): " << a << '\n';
+	
+	
+
+	a = a_save;
+	std::cout << "a == b: " << static_cast<bool>(a == b) << '\n';
+	std::cout << "a != b: " << static_cast<bool>(a != b) << '\n';
+	std::cout << "a > b: " << static_cast<bool>(a > b) << '\n';
+	std::cout << "a < b: " << static_cast<bool>(a < b) << '\n';
+	std::cout << "a >= b: " << static_cast<bool>(a >= b) << '\n';
+	std::cout << "a <= b: " << static_cast<bool>(a <= b) << '\n';
+
+	std::cout << "div by zero: " << a / 0.0 << '\n';
 }
 
+
 int main() {
-  Complex z{2, 3};
-  Complex z1{-1, 1};
-  Complex z2{0};
-  Complex z3{2.0000000000000001, 3};
-  //input check
-  TestParse("{9.1,2.0}");
-  TestParse("{7.0, 2}");
-  TestParse("{9}");
-  TestParse("7,2");
-  bool result = z == z3;
-  std::cout << z << " == " << z3 << " : " << result << '\n';
-  std::cout << z << " + " << z1 << " = " << z + z1 << '\n'; //{1,4}
-  std::cout << z << " - " << z1 << " = " << z - z1 << '\n'; //{3,2}
-  std::cout << z << " * " << z1 << " = " << z * z1 << '\n'; //{-5,-1}
-  try {
-    std::cout << z << " / " << z1 << " = " << z / z1 << '\n'; //{0.5,-2.5}
-    std::cout << z << " / " << z2 << " = " << z / z2 << '\n'; //{0.5,-2.5}
-  } catch (std::runtime_error& e) {
-    std::cout << e.what();
-  }
+	test();
+	return 0;
 }
